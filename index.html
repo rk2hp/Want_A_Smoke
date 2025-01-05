@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Chain Smokers</title>
     <style>
         *{
             margin: 0;
@@ -11,10 +11,27 @@
         }
         body{
             height: 100vh;
+            display: block;
+
+            
+            /* background-color: black; */
+        }
+        #sec1{
+            height: 200px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* background-color: peachpuff; */
+        }
+        #sec2{
             display: flex;
             align-items: flex-end;
             justify-content: flex-end;
-            /* background-color: black; */
+            /* background-color: white; */
+        }
+        #sec1 h1{
+            font-size:40px;
         }
         #container{
             display: flex;
@@ -35,7 +52,7 @@
             position: relative;
             display: flex;
             z-index: 1;
-            top: 72px;
+            top: 82px;
             right: 23%;
             padding: 0 20px;
             /* width: 50px; */
@@ -45,40 +62,57 @@
             position: relative;
             /* bottom: 50px; */
             display: block;
-            margin:0 2px;
-            min-width: 4px;
+            /* margin:0 2px; */
+            /* min-width: 4px; */
             height: 120px;
             background: rgb(144, 142, 142);
             border-radius: 50%;
             animation: animate 7s linear infinite;
-            filter: blur(8px);
+            filter: blur(10px);
             animation-delay: calc(var(--i)* -0.5s);
         }
         @keyframes animate {
             0%
             {
                 transform:translateY(0) scaleX(1);
-                opacity: 0.1;
+                opacity: 0.5;
+                background-color: rgb(119, 119, 119);
+                margin: 0 0px;
+                min-width: 1px;
+                
             }
             25%
             {
                 transform:translateY(-100px) scaleX(3.8);
                 opacity: 0.5;
+                background-color:rgb(70, 69, 69);
+                margin: 0 0px;
+                min-width: 2px;
             }
 
             50%
             {
                 transform:translateY(-220px) scaleX(7.8);
                 opacity: 1;
+                background-color:rgb(54, 53, 53);
+                margin: 0 2px;
+                min-width: 4px;
             }
             75%{
                 transform: translateY(-350px) scaleX(15);
                 opacity:0.5 ;
+                background-color: rgb(0, 0, 0);
+                margin: 0 5px;
+                min-width: 6px;
+                
             }
             100%
             {
                 transform:translateY(-450px) scaleX(20);
                 opacity: 0;
+                background-color:rgb(50, 50, 50);
+                margin: 0 8px;
+                min-width: 7px;
             }
          }       
         .image{
@@ -94,30 +128,35 @@
     </style>
 </head>
 <body>
-    <div id="container">
-
-       <div class="vapour">
-        <span style="--i:1;"></span> 
-        <span style="--i:3;"></span>
-        <span style="--i:16;"></span>
-        <span style="--i:5;"></span>
-        <span style="--i:13;"></span>
-        <span style="--i:20;"></span>
-        <span style="--i:6;"></span>
-        <span style="--i:7;"></span>
-        <span style="--i:10;"></span>
-        <span style="--i:8;"></span>
-        <span style="--i:17;"></span>
-        <span style="--i:11;"></span> 
-        <span style="--i:12;"></span>
-        <!-- <span style="--i:14;"></span> 
-        <span style="--i:2;"></span>
-        <span style="--i:9;"></span> 
-        <span style="--i:15;"></span>
-        <span style="--i:4;"></span>
-        <span style="--i:19;"></span>    -->
-       </div>
-       <img src="images/cig2.png" class="image">
-    </div>
+    <section id="sec1">
+        <h1>Light Up !!</h1>
+    </section>
+    <section id="sec2">
+        <div id="container">
+            <div class="vapour">
+             <span style="--i:1;"></span> 
+             <span style="--i:3;"></span>
+             <span style="--i:16;"></span>
+             <span style="--i:5;"></span>
+             <span style="--i:13;"></span>
+             <span style="--i:20;"></span>
+             <span style="--i:6;"></span>
+             <span style="--i:7;"></span>
+             <span style="--i:10;"></span>
+             <span style="--i:8;"></span>
+             <!-- <span style="--i:17;"></span> -->
+             <span style="--i:11;"></span> 
+             <span style="--i:12;"></span>
+             <span style="--i:14;"></span> 
+             <!-- <span style="--i:2;"></span> -->
+             <span style="--i:9;"></span> 
+             <!-- <span style="--i:15;"></span> -->
+             <span style="--i:4;"></span>
+             <!-- <span style="--i:19;"></span>    -->
+            </div>
+            <img src="images/cig2.png" class="image">
+         </div>
+    </section>
+    
 </body>
 </html>
