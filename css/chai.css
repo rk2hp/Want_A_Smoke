@@ -1,0 +1,69 @@
+.chai{
+    display: flex;
+    background-color: rgb(150, 203, 250);
+    flex: 50%;
+    align-items: flex-end;
+}
+#chai_container{
+    flex-direction: column;
+    width: 100%;
+    display: flex;
+    /* border: 2px solid black; */
+}
+.chai_vapour{
+    /* border: 2px solid red; */
+    height: 120px;
+    z-index: 1;
+    display: flex;
+    position: relative;
+    width: max-content;
+    top: 120px;
+    left: 160px;
+
+}
+.vap{
+    position: relative;
+    display: block;
+    height: 120px;
+    background-color: white;
+    margin: 0 2px;
+    min-width: 4px;
+    filter: blur(6px);
+    animation: chai_vap 8s linear infinite;
+    animation-delay: calc((var(--i)* -0.5s));
+    border-radius: 50%;
+
+}
+.chai_image{
+    height: 400px;
+    width: 500px;
+    /* border: 2px solid green; */
+}
+@keyframes chai_vap {
+    0%{
+        transform: translateY(0) scaleX(2);
+        opacity: 0.3;
+    }
+    25%{
+        transform: translateY(-60px) scaleX();
+        opacity: 1;
+        
+    }
+    50%{
+        transform: translateY(-150px) scaleX(10);
+        opacity: 1;
+    }
+    75%{
+        transform: translateY(-250px) scaleX(15);
+        margin: 0 4px;
+        opacity: 1;
+        
+    }
+    100%{
+        transform: translateY(-300px) scaleX(20);
+        opacity: 1;
+        margin:0 5px;
+    }
+    
+}
+

@@ -4,136 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chain Smokers</title>
+    <link rel="stylesheet" href="css/sutta.css">
+    <link rel="stylesheet" href="css/chai.css">
     <style>
         *{
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
         }
         body{
             height: 100vh;
             display: block;
-
-            
-            /* background-color: black; */
         }
         #sec1{
-            height: 200px;
+            height: 150px;
             width: 100%;
             display: flex;
             justify-content: center;
             align-items: center;
-            /* background-color: peachpuff; */
-        }
-        #sec2{
-            display: flex;
-            align-items: flex-end;
-            justify-content: flex-end;
-            /* background-color: white; */
+            background-color: rgb(237, 237, 237);
         }
         #sec1 h1{
             font-size:40px;
         }
-        #container{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            
-            justify-content: center;
-            height: fit-content;
-            width: 500px;
-            /* border: 2px solid green; */
-          
-            /* background-color: rgb(76, 171, 254); */
-            /* align-items: bottom; */
+        #sec2{
+           display: flex;
+           /* border: 2px solid black; */
+           flex-direction: row;
+           flex-wrap: wrap;
+           height: 82vh;
         }
-        .vapour{
-            height: max-content;
-            /* border: 2px solid black; */
-            position: relative;
-            display: flex;
-            z-index: 1;
-            top: 92px;
-            right: 25%;
-            padding: 0 20px;
-            height: 120px;
-            /* width: 50px; */
-            /* width: 120px; */
-            
+        @media screen and (max-width: 768px){
+            .chai{
+                flex: 100%;
+            }
+            .sutta{
+                flex: 100%;
+            }
         }
-        .vapour span{
-            position: relative;
-            top: 70px;
-            /* bottom: 50px; */
-            display: block;
-            /* margin:0 2px; */
-            /* min-width: 4px; */
-            height: 120px;
-            background: rgb(144, 142, 142);
-            border-radius: 50%;
-            animation: animate 7s linear infinite;
-            filter: blur(9px);
-            animation-delay: calc(var(--i)* -0.5s);
-        }
-        @keyframes animate {
-            0%
-            {
-                transform:translateY(0) scaleX(1);
-                opacity: 0.5;
-                background-color: rgb(119, 119, 119);
-                margin: 0 0px;
-                height: 20px;
-                min-width: 2px;
-                
-            }
-            15%{
-                height: 50px;
-            }
-            25%
-            {
-                transform:translateY(-100px) scaleX(3.8);
-                opacity: 1;
-                background-color:rgb(70, 69, 69);
-                margin: 0 0px;
-                height: 75px;
-                min-width: 2px;
-            }
 
-            50%
-            {
-                transform:translateY(-220px) scaleX(7.8);
-                opacity: 1;
-                background-color:rgb(54, 53, 53);
-                margin: 0 2px;
-                height: 100px;
-                min-width: 4px;
-            }
-            75%{
-                transform: translateY(-350px) scaleX(15);
-                opacity:0.5 ;
-                background-color: rgb(0, 0, 0);
-                margin: 0 5px;
-                min-width: 6px;
-                
-            }
-            100%
-            {
-                transform:translateY(-450px) scaleX(20);
-                opacity: 0;
-                background-color:rgb(50, 50, 50);
-                margin: 0 8px;
-                min-width: 7px;
-            }
-         }       
-        .image{
-            /* border: 2px solid black; */
-            height: 400px;
-            width: 400px;
-            position: relative;
-            left: 10%;
-            /* bottom: -150px;
-            right: 50px; */
-        }
-        
+
+
     </style>
 </head>
 <body>
@@ -141,30 +52,59 @@
         <h1>Light Up !!</h1>
     </section>
     <section id="sec2">
-        <div id="container">
-            <div class="vapour">
-             <span style="--i:1;"></span> 
-             <span style="--i:3;"></span>
-             <span style="--i:16;"></span>
-             <span style="--i:5;"></span>
-             <span style="--i:13;"></span>
-             <span style="--i:20;"></span>
-             <span style="--i:6;"></span>
-             <span style="--i:7;"></span>
-             <span style="--i:10;"></span>
-             <span style="--i:8;"></span>
-             <!-- <span style="--i:17;"></span> -->
-             <span style="--i:11;"></span> 
-             <span style="--i:12;"></span>
-             <span style="--i:14;"></span> 
-             <!-- <span style="--i:2;"></span> -->
-             <span style="--i:9;"></span> 
-             <!-- <span style="--i:15;"></span> -->
-             <span style="--i:4;"></span>
-             <!-- <span style="--i:19;"></span>    -->
-            </div>
-            <img src="images/cig2.png" class="image">
-         </div>
+        <div class="chai">
+            <div id="chai_container">
+                <div class="chai_vapour">
+                 <span class="vap" style="--i:1;"></span> 
+                 <span class="vap" style="--i:3;"></span>
+                 <span class="vap" style="--i:16;"></span>
+                 <span class="vap" style="--i:5;"></span>
+                 <span class="vap" style="--i:13;"></span>
+                 <span class="vap" style="--i:20;"></span>
+                 <span class="vap" style="--i:6;"></span>
+                 <span class="vap" style="--i:7;"></span>
+                 <span class="vap" style="--i:10;"></span>
+                 <span class="vap" style="--i:8;"></span>
+                 <span class="vap" style="--i:17;"></span>
+                 <span class="vap" style="--i:11;"></span> 
+                 <span class="vap" style="--i:12;"></span>
+                 <span class="vap" style="--i:14;"></span> 
+                 <span class="vap" style="--i:2;"></span>
+                 <span class="vap" style="--i:9;"></span> 
+                 <span class="vap" style="--i:15;"></span>
+                 <span class="vap" style="--i:4;"></span>
+                 <span class="vap" style="--i:19;"></span>   
+                </div>
+                <img src="images/chaii.png" class="chai_image">
+             </div>
+        </div>
+        <div class="sutta">
+            <div id="sutta_container">
+                <div class="vapour">
+                 <span style="--i:1;"></span> 
+                 <span style="--i:3;"></span>
+                 <span style="--i:16;"></span>
+                 <span style="--i:5;"></span>
+                 <span style="--i:13;"></span>
+                 <span style="--i:20;"></span>
+                 <span style="--i:6;"></span>
+                 <span style="--i:7;"></span>
+                 <span style="--i:10;"></span>
+                 <span style="--i:8;"></span>
+                 <!-- <span style="--i:17;"></span> -->
+                 <span style="--i:11;"></span> 
+                 <span style="--i:12;"></span>
+                 <span style="--i:14;"></span> 
+                 <!-- <span style="--i:2;"></span> -->
+                 <span style="--i:9;"></span> 
+                 <!-- <span style="--i:15;"></span> -->
+                 <span style="--i:4;"></span>
+                 <!-- <span style="--i:19;"></span>    -->
+                </div>
+                <img src="images/cig2.png" class="sutta_image">
+             </div>
+        </div>
+        
     </section>
     
 </body>
