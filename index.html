@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            height: 100vh;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            /* background-color: black; */
+        }
+        #container{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            
+            justify-content: center;
+            height: fit-content;
+            width: 500px;
+            /* border: 2px solid green; */
+          
+            /* background-color: rgb(76, 171, 254); */
+            /* align-items: bottom; */
+        }
+        .vapour{
+            height: max-content;
+            /* border: 2px solid black; */
+            position: relative;
+            display: flex;
+            z-index: 1;
+            top: 72px;
+            right: 23%;
+            padding: 0 20px;
+            /* width: 50px; */
+            
+        }
+        .vapour span{
+            position: relative;
+            /* bottom: 50px; */
+            display: block;
+            margin:0 2px;
+            min-width: 4px;
+            height: 120px;
+            background: rgb(144, 142, 142);
+            border-radius: 50%;
+            animation: animate 7s linear infinite;
+            filter: blur(8px);
+            animation-delay: calc(var(--i)* -0.5s);
+        }
+        @keyframes animate {
+            0%
+            {
+                transform:translateY(0) scaleX(1);
+                opacity: 0.1;
+            }
+            25%
+            {
+                transform:translateY(-100px) scaleX(3.8);
+                opacity: 0.5;
+            }
+
+            50%
+            {
+                transform:translateY(-220px) scaleX(7.8);
+                opacity: 1;
+            }
+            75%{
+                transform: translateY(-350px) scaleX(15);
+                opacity:0.5 ;
+            }
+            100%
+            {
+                transform:translateY(-450px) scaleX(20);
+                opacity: 0;
+            }
+         }       
+        .image{
+            /* border: 2px solid black; */
+            height: 400px;
+            width: 400px;
+            position: relative;
+            left: 10%;
+            /* bottom: -150px;
+            right: 50px; */
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="container">
+
+       <div class="vapour">
+        <span style="--i:1;"></span> 
+        <span style="--i:3;"></span>
+        <span style="--i:16;"></span>
+        <span style="--i:5;"></span>
+        <span style="--i:13;"></span>
+        <span style="--i:20;"></span>
+        <span style="--i:6;"></span>
+        <span style="--i:7;"></span>
+        <span style="--i:10;"></span>
+        <span style="--i:8;"></span>
+        <span style="--i:17;"></span>
+        <span style="--i:11;"></span> 
+        <span style="--i:12;"></span>
+        <!-- <span style="--i:14;"></span> 
+        <span style="--i:2;"></span>
+        <span style="--i:9;"></span> 
+        <span style="--i:15;"></span>
+        <span style="--i:4;"></span>
+        <span style="--i:19;"></span>    -->
+       </div>
+       <img src="images/cig2.png" class="image">
+    </div>
+</body>
+</html>
