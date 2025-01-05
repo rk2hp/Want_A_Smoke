@@ -2,7 +2,7 @@
     /* border: 2px solid black; */
     flex: 50%;
     display: flex;
-    height: fit-content;
+    
     align-items: flex-end;
     justify-content: flex-end;
     /* transform: rotateY(180deg); 
